@@ -1,0 +1,17 @@
+Description: do not empty LDFLAGS which used for hardening
+Author: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Last-Update: 2015-05-31
+
+---
+
+--- paxctld-1.0.orig/Makefile
++++ paxctld-1.0/Makefile
+@@ -4,7 +4,7 @@
+ 
+ CC=/usr/bin/gcc
+ CFLAGS?=-Wall -O2 -pie -fPIC -D_FORTIFY_SOURCE=2 -fstack-protector-all
+-LDFLAGS=
++#LDFLAGS=
+ STRIP=/usr/bin/strip
+ MANDIR=/usr/share/man
+ INSTALL=/usr/bin/install -c

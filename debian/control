@@ -1,0 +1,15 @@
+Source: paxctld
+Section: admin
+Priority: important
+Maintainer: Laszlo Boszormenyi (GCS) <gcs@debian.org>
+Build-Depends: debhelper (>= 9)
+Standards-Version: 3.9.8
+Homepage: https://grsecurity.net
+
+Package: paxctld
+Architecture: linux-any
+Depends: ${shlibs:Depends}, ${misc:Depends}, lsb-base
+Description: Daemon to automatically set appropriate PaX flags
+ paxctld automatically sets appropriate PaX flags on binaries on the system
+ using user extended attributes.  The flags are maintained across any
+ updates made to the binaries listed in the paxctld configuration file.
